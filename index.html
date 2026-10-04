@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier Luce — Hair &amp; Beauty Studio</title>
+<meta name="description" content="Atelier Luce: taglio, colore e trattamenti su misura. Prenota il tuo appuntamento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ee;--paper:#fffdfa;--ink:#2b2622;--muted:#7a7068;--line:#e4dcd2;--accent:#a8876a;--accent-dark:#7d6249}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--bg);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400}
+.demo-bar{background:var(--ink);color:#e9e2d9;font-size:12px;text-align:center;padding:6px 16px;letter-spacing:.04em}
+header{position:sticky;top:0;z-index:10;background:rgba(247,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-size:26px;letter-spacing:.08em}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:32px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.links a:hover{color:var(--accent)}
+.btn{display:inline-block;padding:14px 30px;border:1px solid var(--ink);font-size:12px;letter-spacing:.16em;text-transform:uppercase;transition:.25s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.solid:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.hero{padding:120px 0 100px;text-align:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#ecdfd1 0%,transparent 70%);top:-120px;left:50%;transform:translateX(-50%);z-index:-1}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-size:clamp(44px,8vw,88px);line-height:1.05;margin:20px 0 24px}
+.hero h1 em{color:var(--accent)}
+.hero p{max-width:520px;margin:0 auto 40px;color:var(--muted)}
+.hero .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+section{padding:100px 0}
+.title{text-align:center;margin-bottom:60px}
+.title h2{font-size:clamp(34px,5vw,52px);margin-top:10px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about .visual{aspect-ratio:4/5;background:linear-gradient(160deg,#e8dccd,#cdb79f);position:relative}
+.about .visual:after{content:"AL";position:absolute;inset:0;display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:140px;color:rgba(255,255,255,.55);letter-spacing:.05em}
+.about h2{font-size:44px;line-height:1.15;margin:10px 0 24px}
+.about p{color:var(--muted);margin-bottom:18px}
+.stats{display:flex;gap:40px;margin-top:32px}
+.stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:400;color:var(--accent-dark)}
+.stats small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.services{background:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--paper);padding:44px 36px}
+.card h3{font-size:28px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px;margin-bottom:24px}
+.price{list-style:none;font-size:14px}
+.price li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dotted var(--line)}
+.price li span:last-child{color:var(--accent-dark);font-weight:400}
+.reviews .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.quote{padding:36px;border:1px solid var(--line);background:var(--paper)}
+.quote p{font-family:"Cormorant Garamond",serif;font-size:22px;font-style:italic;line-height:1.4;margin-bottom:20px}
+.quote small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.booking{background:var(--ink);color:#efe8df}
+.booking .title h2{color:#fff}
+.booking-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px}
+.info h3{font-size:26px;color:#fff;margin-bottom:12px}
+.info p,.info li{color:#bfb4a8;font-size:14px}
+.info ul{list-style:none;margin-bottom:28px}
+.info li{display:flex;justify-content:space-between;max-width:300px;padding:4px 0}
+form{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+input,select,textarea{width:100%;background:transparent;border:1px solid #574e46;color:#fff;padding:14px 16px;font:inherit;font-size:14px}
+select option{color:#000}
+input::placeholder,textarea::placeholder{color:#8c8178}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+form .btn{border-color:var(--accent);background:var(--accent);color:#fff;cursor:pointer;font-family:inherit}
+form .btn:hover{background:transparent}
+.ok{display:none;color:var(--accent);font-size:14px}
+footer{padding:40px 0;text-align:center;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.wa{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.18);z-index:20}
+.wa svg{width:28px;height:28px;fill:#fff}
+@media (max-width:860px){
+ .links{display:none}
+ .about,.booking-grid{grid-template-columns:1fr;gap:40px}
+ .grid,.reviews .quotes{grid-template-columns:1fr}
+ section{padding:72px 0}
+ .hero{padding:80px 0 70px}
+ .row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">Sito dimostrativo — salone di fantasia creato come esempio di lavoro</div>
+<header>
+ <div class="wrap"><nav>
+  <a href="#" class="logo serif">Atelier <span>Luce</span></a>
+  <div class="links"><a href="#chi-siamo">Chi siamo</a><a href="#servizi">Servizi</a><a href="#recensioni">Recensioni</a><a href="#prenota">Contatti</a></div>
+  <a href="#prenota" class="btn">Prenota</a>
+ </nav></div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <div class="eyebrow">Hair &amp; Beauty Studio</div>
+  <h1 class="serif">La tua bellezza,<br><em>su misura.</em></h1>
+  <p>Taglio, colore e trattamenti pensati per te, in uno spazio luminoso dove prenderti il tempo che meriti.</p>
+  <div class="ctas"><a href="#prenota" class="btn solid">Prenota un appuntamento</a><a href="#servizi" class="btn">Scopri i servizi</a></div>
+ </div>
+</section>
+
+<section id="chi-siamo">
+ <div class="wrap about">
+  <div class="visual" role="img" aria-label="Atelier Luce"></div>
+  <div>
+   <div class="eyebrow">Chi siamo</div>
+   <h2 class="serif">Un atelier, non un semplice salone.</h2>
+   <p>Da Atelier Luce ogni appuntamento inizia con una consulenza: ascoltiamo, osserviamo e costruiamo insieme il look più adatto al tuo viso, al tuo stile e alla tua routine.</p>
+   <p>Usiamo prodotti professionali a basso impatto e tecniche aggiornate, con un'attenzione speciale alla salute del capello.</p>
+   <div class="stats">
+    <div><b>12</b><small>Anni di esperienza</small></div>
+    <div><b>4.9★</b><small>Su Google</small></div>
+    <div><b>3k+</b><small>Clienti felici</small></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="servizi" class="services">
+ <div class="wrap">
+  <div class="title"><div class="eyebrow">Servizi &amp; Prezzi</div><h2 class="serif">Cosa possiamo fare per te</h2></div>
+  <div class="grid">
+   <div class="card">
+    <h3 class="serif">Taglio &amp; Piega</h3>
+    <p>Consulenza d'immagine inclusa in ogni taglio.</p>
+    <ul class="price"><li><span>Taglio donna</span><span>da €35</span></li><li><span>Taglio uomo</span><span>da €22</span></li><li><span>Piega</span><span>da €20</span></li><li><span>Raccolto evento</span><span>da €45</span></li></ul>
+   </div>
+   <div class="card">
+    <h3 class="serif">Colore</h3>
+    <p>Colorazioni personalizzate e luminose.</p>
+    <ul class="price"><li><span>Colore</span><span>da €40</span></li><li><span>Balayage</span><span>da €90</span></li><li><span>Meches / Shatush</span><span>da €75</span></li><li><span>Gloss tonalizzante</span><span>da €25</span></li></ul>
+   </div>
+   <div class="card">
+    <h3 class="serif">Trattamenti</h3>
+    <p>Rituali di cura per capelli e cute.</p>
+    <ul class="price"><li><span>Ricostruzione</span><span>da €30</span></li><li><span>Trattamento cheratina</span><span>da €120</span></li><li><span>Rituale cute</span><span>da €25</span></li><li><span>Pacchetto sposa</span><span>su richiesta</span></li></ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="recensioni" class="reviews">
+ <div class="wrap">
+  <div class="title"><div class="eyebrow">Recensioni</div><h2 class="serif">Cosa dicono di noi</h2></div>
+  <div class="quotes">
+   <div class="quote"><p>“Qui trovi le recensioni reali dei tuoi clienti, importate da Google.”</p><small>Esempio di recensione</small></div>
+   <div class="quote"><p>“Ogni salone ha le sue parole migliori: le mettiamo in vetrina.”</p><small>Esempio di recensione</small></div>
+   <div class="quote"><p>“Spazio per una terza recensione a cinque stelle.”</p><small>Esempio di recensione</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="prenota" class="booking">
+ <div class="wrap">
+  <div class="title"><div class="eyebrow">Prenota</div><h2 class="serif">Ti aspettiamo</h2></div>
+  <div class="booking-grid">
+   <div class="info">
+    <h3 class="serif">Orari</h3>
+    <ul><li><span>Martedì – Venerdì</span><span>9:00 – 19:00</span></li><li><span>Sabato</span><span>9:00 – 18:00</span></li><li><span>Domenica – Lunedì</span><span>Chiuso</span></li></ul>
+    <h3 class="serif">Dove siamo</h3>
+    <p>Via dell'Esempio 12, 00100 Città<br>Tel. 000 000 0000 · info@atelierluce.example</p>
+   </div>
+   <form id="f">
+    <div class="row"><input required placeholder="Nome e cognome"><input required type="tel" placeholder="Telefono"></div>
+    <div class="row">
+     <select required><option value="">Servizio</option><option>Taglio &amp; Piega</option><option>Colore</option><option>Trattamenti</option><option>Altro</option></select>
+     <input type="date" required>
+    </div>
+    <textarea rows="4" placeholder="Note (facoltative)"></textarea>
+    <button class="btn" type="submit">Richiedi appuntamento</button>
+    <div class="ok" id="ok">Grazie! Questa è una demo: nel sito reale la richiesta arriva via WhatsApp o email al salone.</div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<footer><div class="wrap">© Atelier Luce · Sito dimostrativo</div></footer>
+
+<a class="wa" href="#prenota" aria-label="Scrivici su WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg></a>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block';this.reset();});
+</script>
+</body>
+</html>
